@@ -9,6 +9,12 @@ This repo compares two ways to plan paths for a car that can drive forward and r
 
 The repo plans those paths, measures how much cheaper B is than A, and splits those benefits into two effects: reverse-penalty symmetry vs relaxing the goal heading.
 
+## Demo
+
+<video src="docs/compare.mp4" controls width="100%"></video>
+
+Vehicle A (left) vs vehicle B (right) on 10 obstacle scenes. Regenerate with `uv run python experiments/animate.py`.
+
 Outputs:
 
 
@@ -84,6 +90,7 @@ planner/obstacles.py         # Vehicle footprint collision + drawing
 planner/reeds_shepp.py       # Python API + path sampling; enumeration via Rust
 src/lib.rs                   # PyO3 bindings
 experiments/compare.py       # 500-trial figure → output/overview.png
+docs/compare.mp4             # demo video embedded in README
 experiments/animate.py       # 10-scenario video → output/compare.mp4
 experiments/viz.py           # Shared figure styling
 ```
@@ -100,7 +107,7 @@ uv run python experiments/compare.py
 uv run python experiments/animate.py   # → output/compare.mp4
 ```
 
-Run from the repo root. Generated files land in `output/` (gitignored except `.gitkeep`).
+Run from the repo root. Generated files land in `output/` (gitignored except `.gitkeep`). To refresh the README demo, copy `output/compare.mp4` to `docs/compare.mp4`.
 
 Quick API example (free space, axis goal):
 

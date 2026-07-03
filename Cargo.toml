@@ -1,0 +1,14 @@
+[package]
+name = "bidi-planner-rs"
+version = "0.1.0"
+edition = "2021"
+description = "PyO3 bindings to linusweigand/reeds-shepp-rust"
+license = "MIT"
+
+[lib]
+name = "reeds_shepp_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.23", features = ["extension-module"] }
+reeds_shepp = "0.1.1"

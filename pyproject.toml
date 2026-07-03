@@ -1,0 +1,24 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "bidi-planner"
+version = "0.1.0"
+description = "SE(2)/Z2 bidirectional hybrid A*, cost decomposition experiment"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.0",
+    "numpy>=2",
+]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "reeds_shepp_rs"
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+line-length = 100

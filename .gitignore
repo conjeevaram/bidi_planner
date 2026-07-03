@@ -1,0 +1,30 @@
+# rust
+/target/
+**/*.rs.bk
+
+# python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+dist/
+build/
+
+# generated outputs
+output/*
+!output/.gitkeep
+
+# other
+.env
+.env.*
+.DS_Store
+Thumbs.db
+.cursor/
+*.swp
+*~
+.idea/
+.vscode/
